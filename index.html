@@ -2,79 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Choose Your Link</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashutosh Shrivas | Links</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.75), transparent 30%),
+        linear-gradient(135deg, #1c7ed6 0%, #20c997 48%, #f59f00 100%);
+      color: #1f2937;
+      font-family: "Segoe UI", Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
     }
 
     .container {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      padding: 40px;
-      max-width: 400px;
+      width: min(100%, 420px);
+      padding: 34px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 18px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25);
       text-align: center;
+      backdrop-filter: blur(16px);
     }
 
     .logo {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #000003;
+      margin-bottom: 18px;
+      border: 5px solid #ffffff;
+      box-shadow: 0 12px 32px rgba(31, 41, 55, 0.24);
     }
 
-
     h1 {
-      color: #333;
-      margin-bottom: 20px;
+      margin: 0;
+      color: #111827;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 10px 0 26px;
+      color: #5b6472;
+      font-size: 15px;
     }
 
     .link-button {
-      display: block;
-      margin: 15px 0;
-      padding: 14px 20px;
-      background-color: #6268db;
-      color: white;
-      border: none;
-      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 62px;
+      margin: 14px 0;
+      padding: 12px 16px;
+      background: #ffffff;
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
       text-decoration: none;
       font-size: 16px;
-      transition: background 0.3s ease;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .link-button img,
+    .link-icon {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .link-icon {
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #1c7ed6, #20c997);
+      color: #ffffff;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    .link-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .link-title {
+      line-height: 1.2;
+    }
+
+    .link-note {
+      margin-top: 4px;
+      color: #6b7280;
+      font-size: 13px;
+      font-weight: 500;
     }
 
     .link-button:hover {
-      background-color: #8b9ce9;
+      border-color: #1c7ed6;
+      box-shadow: 0 16px 34px rgba(28, 126, 214, 0.18);
+      transform: translateY(-3px);
     }
 
-    .footer {
-      font-size: 12px;
-      color: #777;
-      margin-top: 20px;
+    .link-button:focus-visible {
+      outline: 3px solid rgba(28, 126, 214, 0.35);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 16px;
+      }
+
+      .container {
+        padding: 26px 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="ashu.jpg" alt="Profile Photo" class="logo" />
-    <h1>Welcome! Choose a Link</h1>
-    <a href="https://www.linkedin.com/in/ashutosh-shrivas-803923293/" class="link-button" target="_blank">
-  <img src="image copy.png" alt="LinkedIn" style="width: 40px; height: 40px; border-radius: 80%; vertical-align: middle; margin-right: 0px;" />Linkedin
-</a>
+    <h1>Ashutosh Shrivas</h1>
+    <p class="subtitle">Welcome! Explore my links.</p>
 
-    <a href="https://github.com/shrivasashutosh1027" class="link-button" target="_blank">
-   <img src="image.png" alt="LinkedIn" style="width: 30px; height: 30px; border-radius: 80%; vertical-align: middle; margin-right: 0px;" />
-  Github </a>
+    <a href="https://www.linkedin.com/in/ashutosh-shrivas-803923293/" class="link-button" target="_blank" rel="noopener noreferrer" aria-label="Open Ashutosh Shrivas on LinkedIn">
+      <img src="image copy.png" alt="" />
+      <span class="link-content">
+        <span class="link-title">LinkedIn</span>
+        <span class="link-note">Connect professionally</span>
+      </span>
+    </a>
 
-</div>
+    <a href="https://github.com/shrivasashutosh1027" class="link-button" target="_blank" rel="noopener noreferrer" aria-label="Open Ashutosh Shrivas on GitHub">
+      <img src="image.png" alt="" />
+      <span class="link-content">
+        <span class="link-title">GitHub</span>
+        <span class="link-note">View code and projects</span>
+      </span>
+    </a>
+  </div>
 </body>
 </html>
